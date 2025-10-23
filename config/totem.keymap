@@ -83,10 +83,14 @@
             bindings = <&kp ENTER>;
             key-positions = <16 17 18>;
         };
-
         enter_combo_left {
             bindings = <&kp ENTER>;
             key-positions = <11 12 13>;
+        };
+        command_combo {
+            timeout-ms = <50>;
+            key-positions = <33 36>;
+            bindings = <&kp LEFT_COMMAND>;
         };
     };
 
