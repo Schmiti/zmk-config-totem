@@ -27,6 +27,10 @@
     tapping-term-ms = <170>;
 };
 
+&soft_off {
+  hold-time-ms = <2000>;
+}
+
 / {
     behaviors {
         caps_lock_tap_dance: caps_lock_tap_dance {
@@ -94,24 +98,14 @@
             key-positions = <33 36>;
             bindings = <&kp LEFT_COMMAND>;
         };
+
+        turn_off_combo {
+          key-positions= <20 31>;
+          bindings = <&soft_off>;
+        }
     };
 
     macros {
-        gif: gif {
-            label = "giphy";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LSHFT>,
-                <&macro_tap>,
-                <&kp N2>,
-                <&macro_release>,
-                <&kp LSHFT>,
-                <&macro_tap>,
-                <&kp G &kp I &kp F>;
-        };
-
         e_aigu: e_aigu {
             wait-ms = <0>;
             tap-ms = <0>;
