@@ -102,7 +102,7 @@
         turn_off_combo {
           key-positions= <20 31>;
           bindings = <&soft_off>;
-        }
+        };
     };
 
     macros {
