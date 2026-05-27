@@ -27,19 +27,10 @@
     tapping-term-ms = <170>;
 };
 
-&soft_off {
-  hold-time-ms = <1000>;
-};
+&soft_off { hold-time-ms = <1000>; };
 
 / {
     behaviors {
-        caps_lock_tap_dance: caps_lock_tap_dance {
-            compatible = "zmk,behavior-tap-dance";
-            label = "CAPS_LOCK_TAP_DANCE";
-            #binding-cells = <0>;
-            bindings = <&kp ESC>, <&kp CAPSLOCK>;
-        };
-
         layer_1_lock_tap_dance: layer_1_lock_tap_dance {
             compatible = "zmk,behavior-tap-dance";
             label = "LAYER_1_LOCK_TAP_DANCE";
@@ -100,8 +91,8 @@
         };
 
         turn_off_combo {
-          key-positions= <20 31>;
-          bindings = <&soft_off>;
+            key-positions = <20 31>;
+            bindings = <&soft_off>;
         };
     };
 
@@ -208,10 +199,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                      &kp Q                &kp C            &kp O             &kp P         &kp W      &kp J      &kp M         &kp D         &sl ADJ          &kp Y
-                      &hml LEFT_COMMAND A  &hml LEFT_ALT S  &hml LSHFT E      &hml LCTRL N  &kp F      &kp L      &hmr LCTRL R  &hmr LSHFT T  &hmr LEFT_ALT I  &hmr LEFT_COMMAND U
-&caps_lock_tap_dance  &kp Z                &kp X            &kp QUESTION      &kp V         &kp B      &kp COLON  &kp H         &kp G         &kp DOT          &kp K                &kp BSPC
-                                                            &kp LEFT_COMMAND  &lt NAV TAB   &mo SYM    &mo NAV    &kp SPACE     &kp BSPC
+              &kp Q                &kp C            &kp O             &kp P         &kp W      &kp J      &kp M         &kp D         &sl ADJ          &kp Y
+              &hml LEFT_COMMAND A  &hml LEFT_ALT S  &hml LSHFT E      &hml LCTRL N  &kp F      &kp L      &hmr LCTRL R  &hmr LSHFT T  &hmr LEFT_ALT I  &hmr LEFT_COMMAND U
+&kp CAPSLOCK  &kp Z                &kp X            &kp QUESTION      &kp V         &kp B      &kp COLON  &kp H         &kp G         &kp DOT          &kp K                &kp BSPC
+                                                    &kp LEFT_COMMAND  &lt NAV TAB   &mo SYM    &mo NAV    &kp SPACE     &kp BSPC
             >;
         };
 
@@ -294,6 +285,5 @@
         };
 
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-
     };
 };
