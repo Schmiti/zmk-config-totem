@@ -42,7 +42,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
-            require-prior-idle-ms = <70>;
+            require-prior-idle-ms = <20>;
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
@@ -55,7 +55,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
-            require-prior-idle-ms = <70>;
+            require-prior-idle-ms = <20>;
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
@@ -199,9 +199,9 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-              &kp Q                &kp C            &kp O             &kp P         &kp W      &kp J      &kp M         &kp D         &sl ADJ          &kp Y
-              &hml LEFT_COMMAND A  &hml LEFT_ALT S  &hml LSHFT E      &hml LCTRL N  &kp F      &kp L      &hmr LCTRL R  &hmr LSHFT T  &hmr LEFT_ALT I  &hmr LEFT_COMMAND U
-&kp CAPSLOCK  &kp Z                &kp X            &kp QUESTION      &kp V         &kp B      &kp COLON  &kp H         &kp G         &kp DOT          &kp K                &kp BSPC
+              &kp Q            &kp C                &kp O             &kp P         &kp W      &kp J      &kp M         &kp D         &sl ADJ              &kp Y
+              &hml LEFT_ALT A  &hml LEFT_COMMAND S  &hml LSHFT E      &hml LCTRL N  &kp F      &kp L      &hmr LCTRL R  &hmr LSHFT T  &hmr LEFT_COMMAND I  &hmr LEFT_ALT U
+&kp CAPSLOCK  &kp Z            &kp X                &kp QUESTION      &kp V         &kp B      &kp COLON  &kp H         &kp G         &kp DOT              &kp K            &kp BSPC
                                                     &kp LEFT_COMMAND  &lt NAV TAB   &mo SYM    &mo NAV    &kp SPACE     &kp BSPC
             >;
         };
